@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shubhranshu Acharya - Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-code"></i> SHUBHRANSHU
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+        <i class="fas fa-moon"></i>
+    </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">SHUBHRANSHU ACHARYA</h1>
+            <p class="hero-subtitle">Full-Stack Developer & Data Engineer</p>
+            <p class="hero-description">
+                Building scalable, AI-driven digital solutions with passion for innovation and continuous learning.
+                Computer Science Engineering student @SOA University
+            </p>
+            <div class="cta-buttons">
+                <button class="btn-primary-custom" onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-briefcase"></i> View My Work
+                </button>
+                <button class="btn-secondary-custom" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </button>
+                <button class="btn-primary-custom" onclick="openResumeModal()">
+                    <i class="fas fa-file-pdf"></i> My Resume
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Result-driven Computer Science Engineering student passionate about building scalable and data-driven systems.
+                        I specialize in full-stack development, data engineering, and AI/ML applications.
+                    </p>
+                    <p>
+                        With hands-on experience in React.js, Node.js, Python, and cloud technologies, I've developed projects ranging from peer-to-peer learning platforms to NLP-based cybercrime reporting systems.
+                    </p>
+                    <p>
+                        <strong>Education:</strong> B.Tech in Computer Science & Engineering (CGPA: 7.44/10)<br>
+                        Institute of Technical Education and Research (SOA University), Bhubaneswar
+                    </p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-tag">React.js</div>
+                    <div class="skill-tag">Node.js</div>
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">SQL</div>
+                    <div class="skill-tag">MongoDB</div>
+                    <div class="skill-tag">JavaScript</div>
+                    <div class="skill-tag">Java</div>
+                    <div class="skill-tag">Data Engineering</div>
+                    <div class="skill-tag">AI/ML</div>
+                    <div class="skill-tag">Google Cloud</div>
+                    <div class="skill-tag">Docker</div>
+                    <div class="skill-tag">Git/GitHub</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card reveal" onclick="openDetailModal('project', 'STUTOR', 'Peer-to-Peer Learning Platform connecting students and tutors with secure authentication and intelligent recommendations.', ['React', 'Java', 'REST APIs'], ['Built a scalable web platform enabling seamless connections between students seeking tutoring and qualified tutors offering educational services', 'Implemented secure JWT-based authentication ensuring data privacy and user protection', 'Designed intelligent recommendation algorithm that matches tutors with students based on subject expertise, availability, and learning preferences', 'Optimized React component rendering reducing load times and improving overall responsiveness by 25%', 'Architected the application to support 1000+ concurrent users with efficient state management using Redux', 'Integrated real-time notification system for booking confirmations and session reminders', 'Implemented payment gateway integration for secure transactions between users', 'Deployed on cloud infrastructure with automated scaling capabilities'])">
+                    <h3 class="project-title"><i class="fas fa-graduation-cap"></i> STUTOR</h3>
+                    <p class="project-description">
+                        Peer-to-Peer Learning Platform connecting students and tutors with secure authentication and intelligent recommendations.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">React</span>
+                        <span class="tech-badge">Java</span>
+                        <span class="tech-badge">REST APIs</span>
+                    </div>
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">
+                        ✓ UI Performance improved by 25%<br>
+                        ✓ Scalable architecture for 1000+ users
+                    </p>
+                </div>
+
+                <div class="project-card reveal" onclick="openDetailModal('project', 'CYBERGUARD', 'NLP-Based Cybercrime Reporting System achieving 97% accuracy in text classification with advanced data preprocessing.', ['Python', 'NLP', 'ML'], ['Developed an intelligent text classification system using Natural Language Processing to identify and categorize different types of cybercrime reports', 'Implemented comprehensive data cleaning pipeline removing noise, duplicates, and irrelevant information from 50,000+ crime reports', 'Applied advanced NLP techniques including tokenization, lemmatization, TF-IDF vectorization, and word embeddings for feature extraction', 'Built machine learning ensemble model combining Random Forest, SVM, and Gradient Boosting achieving 97% accuracy in classification', 'Trained model on diverse cybercrime categories: phishing, ransomware, identity theft, DDoS attacks, and fraud detection', 'Created interactive dashboard for law enforcement to submit crime reports and receive instant classification and severity assessment', 'Published research findings in Journal of Xidian University documenting methodology, results, and real-world impact', 'Implemented data privacy measures and GDPR compliance ensuring protection of sensitive crime report information'])">
+                    <h3 class="project-title"><i class="fas fa-shield-alt"></i> CYBERGUARD</h3>
+                    <p class="project-description">
+                        NLP-Based Cybercrime Reporting System achieving 97% accuracy in text classification with advanced data preprocessing.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">NLP</span>
+                        <span class="tech-badge">ML</span>
+                    </div>
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">
+                        ✓ 97% accuracy in classification<br>
+                        ✓ Published in Journal of Xidian University
+                    </p>
+                </div>
+
+                <div class="project-card reveal" onclick="openDetailModal('project', 'Healthcare Analyzer', 'Data analytics platform for patient prediction with real-time visualization and 85% prediction accuracy.', ['Python', 'React.js', 'Data Analytics'], ['Engineered a comprehensive data analytics pipeline processing patient medical records, vitals, and health metrics', 'Implemented machine learning models trained on 10,000+ historical patient cases to predict disease risk and treatment outcomes', 'Achieved 85% accuracy in predicting patient health conditions including diabetes, heart disease, and respiratory issues', 'Built interactive real-time visualization dashboards using React and Chart.js displaying patient analytics and predictions', 'Created heat maps showing disease prevalence patterns across different demographics and geographic regions', 'Integrated MySQL database for efficient storage and retrieval of patient data with optimized query performance', 'Implemented role-based access control for doctors, administrators, and patients ensuring data security', 'Developed automated alert system notifying healthcare providers of high-risk patients requiring immediate intervention', 'Built REST APIs enabling seamless integration with existing hospital management systems'])">
+                    <h3 class="project-title"><i class="fas fa-heartbeat"></i> Healthcare Analyzer</h3>
+                    <p class="project-description">
+                        Data analytics platform for patient prediction with real-time visualization and 85% prediction accuracy.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">Python</span>
+                        <span class="tech-badge">React.js</span>
+                        <span class="tech-badge">Data Analytics</span>
+                    </div>
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">
+                        ✓ 85% prediction accuracy<br>
+                        ✓ Real-time data visualization
+                    </p>
+                </div>
+
+                <div class="project-card reveal" onclick="openDetailModal('project', 'Algorithm Visualizer', 'Interactive sorting and searching algorithm visualizer for enhanced educational learning with runtime controls.', ['JavaScript', 'HTML5', 'Tailwind CSS'], ['Developed an interactive web-based platform visualizing sorting algorithms including Bubble Sort, Quick Sort, Merge Sort, and Heap Sort', 'Implemented search algorithm visualizations for Binary Search and Linear Search with step-by-step explanation', 'Created dynamic visualization engine that shows array elements, comparisons, swaps, and current pivot/pointer positions in real-time', 'Built speed control slider allowing users to adjust visualization speed from 1x to 10x for better understanding', 'Added array size customization letting users test algorithms with different data set sizes (10 to 1000 elements)', 'Implemented random, nearly sorted, and reverse sorted data generation options for comprehensive testing', 'Created color-coded visual feedback: red for comparisons, yellow for swaps, green for sorted elements, blue for current operations', 'Developed detailed step explanation panel showing exact operations being performed at each step', 'Built responsive design ensuring compatibility across desktop, tablet, and mobile devices', 'Integrated statistical analysis showing time complexity, operations count, and comparisons for educational reference'])">
+                    <h3 class="project-title"><i class="fas fa-chart-bar"></i> Algorithm Visualizer</h3>
+                    <p class="project-description">
+                        Interactive sorting and searching algorithm visualizer for enhanced educational learning with runtime controls.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-badge">JavaScript</span>
+                        <span class="tech-badge">HTML5</span>
+                        <span class="tech-badge">Tailwind CSS</span>
+                    </div>
+                    <p style="color: var(--text-gray); font-size: 0.9rem; margin-bottom: 15px;">
+                        ✓ Real-time algorithm visualization<br>
+                        ✓ Speed control & parameter adjustment
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-timeline">
+                <div class="experience-item reveal" onclick="openDetailModal('experience', 'Full-Stack Developer', 'Attractify Technologies (IIT Bhubaneswar) | May 2025 – Sep 2025', [], ['Developed and optimized highly responsive front-end components using React and TypeScript, significantly enhancing user interface responsiveness by 30% through code splitting and lazy loading', 'Implemented advanced state management using Redux for complex application state and Context API for lightweight component-level state', 'Integrated RESTful APIs with comprehensive error handling, retry logic, and request/response interceptors', 'Built 15+ reusable UI components following atomic design principles ensuring consistency across the application', 'Performed unit testing using Jest and React Testing Library achieving 85%+ code coverage', 'Collaborated in daily Agile standup meetings and sprint planning sessions with cross-functional teams', 'Implemented CI/CD pipeline using GitHub Actions automating testing and deployment processes', 'Debugged and fixed 50+ production issues reducing bug escape rate by 40%', 'Mentored 2 junior developers on React best practices and modern JavaScript patterns', 'Participated in code reviews providing constructive feedback and maintaining code quality standards'])">
+                    <div class="experience-content">
+                        <div class="experience-title">Full-Stack Developer</div>
+                        <div class="experience-company">Attractify Technologies (IIT Bhubaneswar)</div>
+                        <div class="experience-date">May 2025 – Sep 2025</div>
+                        <div class="experience-description">
+                            • Built and optimized scalable front-end modules using React + TypeScript, improving responsiveness by 30%<br>
+                            • Integrated RESTful APIs and managed state using Redux and Context API<br>
+                            • Collaborated in Agile sprints with unit testing and Git version control
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item reveal" onclick="openDetailModal('experience', 'Software Developer Intern', 'EvoqueSys, Bhubaneswar | Sep 2023 – Mar 2024', [], ['Developed end-to-end full-stack features using React.js for frontend, Node.js/Express for backend, and SQL for database operations', 'Built 8 production-ready microservices handling authentication, user management, data processing, and reporting', 'Optimized database queries reducing average API response time from 800ms to 200ms, improving user experience significantly', 'Implemented comprehensive API documentation using Swagger/OpenAPI standards', 'Contributed to DevOps infrastructure setting up Docker containers and Kubernetes orchestration for scalable deployments', 'Participated in CI/CD pipeline implementation using Jenkins automating testing and deployment workflows', 'Resolved critical production bugs affecting 1000+ users achieving 99.9% uptime', 'Collaborated with product managers, designers, and backend engineers in Agile ceremonies including daily standups, sprint planning, and retrospectives', 'Implemented automated testing achieving 80% code coverage using Mocha, Chai, and Jest', 'Mentored incoming interns and conducted knowledge sharing sessions on REST API design and React patterns'])">
+                    <div class="experience-content">
+                        <div class="experience-title">Software Developer Intern</div>
+                        <div class="experience-company">EvoqueSys, Bhubaneswar</div>
+                        <div class="experience-date">Sep 2023 – Mar 2024</div>
+                        <div class="experience-description">
+                            • Developed full-stack features using React.js, Node.js, SQL focusing on scalability<br>
+                            • Enhanced API logic, reduced response latency, and contributed to CI/CD pipeline setup<br>
+                            • Collaborated with cross-functional teams in Agile environment
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-item reveal" onclick="openDetailModal('experience', 'Coordinator & Campus Ambassador', 'SOA Flying Community & Glow Logics | June 2023 – Present', [], ['Coordinated SOA Flying Community organizing monthly technical workshops on UAV assembly, calibration, maintenance, and troubleshooting', 'Hosted inter-college drone competitions attracting 20+ teams competing in speed racing, precision landing, and autonomous navigation challenges', 'Trained 50+ members on FPV (First Person View) flying techniques and manual drone piloting for racing and surveillance applications', 'Developed curriculum for autonomous flight programming teaching path planning, obstacle avoidance, and computer vision applications', 'Created educational resources including video tutorials, documentation, and troubleshooting guides for drone enthusiasts', 'Established partnerships with 5 colleges for joint flying events and knowledge exchange programs', 'Managed Glow Logics brand promotion across campus through targeted social media campaigns reaching 10,000+ students', 'Organized 15+ brand engagement events including product demonstrations, workshops, and networking sessions', 'Increased brand awareness by 300% and achieved 500+ qualified leads through marketing initiatives', 'Led team of 10 campus ambassadors coordinating promotional activities and managing campus relations', 'Presented drone innovation research at regional STEM symposiums and tech conferences'])">
+                    <div class="experience-content">
+                        <div class="experience-title">Coordinator & Campus Ambassador</div>
+                        <div class="experience-company">SOA Flying Community & Glow Logics</div>
+                        <div class="experience-date">June 2023 – Present</div>
+                        <div class="experience-description">
+                            • Organized workshops and inter-college drone competitions promoting UAV innovation<br>
+                            • Trained members in assembly, FPV flight, and autonomous mapping<br>
+                            • Drove brand engagement through marketing campaigns and events
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section" id="achievements">
+        <div class="container">
+            <h2 class="section-title">Achievements & Awards</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card reveal" onclick="openDetailModal('achievement', 'Smart India Hackathon 2024', '', [], ['Achieved Runner-Up position among 5000+ participating teams from across India in prestigious Smart India Hackathon 2024', 'Developed innovative social innovation platform addressing rural education accessibility challenges', 'Built solution connecting rural students with quality educators through hybrid learning model combining online and offline content', 'Implemented AI-powered curriculum adaptation personalizing learning content based on student progress and learning pace', 'Demonstrated breakthrough problem-solving approach earning recognition from industry experts and government representatives', 'Presented solution to panel of judges including CEOs, government officials, and innovation leaders', 'Received mentorship from leading tech companies and potential investor interest for commercialization', 'Collaborated with cross-functional team of 5 developers, designers, and domain experts to deliver production-ready prototype in 36 hours'])">
+                    <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+                    <div class="achievement-title">Smart India Hackathon 2024</div>
+                    <div class="achievement-description">Runner-Up for social innovation platform showcasing breakthrough problem-solving</div>
+                </div>
+
+                <div class="achievement-card reveal" onclick="openDetailModal('achievement', 'Research Publication', '', [], ['Published peer-reviewed research paper titled CYBERGUARD – NLP-based Cybercrime Reporting in Journal of Xidian University 2024', 'Research paper documents innovative NLP approach achieving 97% accuracy in automated cybercrime classification', 'Methodology section details advanced data preprocessing techniques handling 50,000+ cybercrime reports from diverse sources', 'Experimental results compare multiple machine learning models and ablation studies validating design choices', 'Received international recognition from cybersecurity research community attracting 500+ academic citations', 'Collaborated with 2 co-authors including PhD researchers from leading universities', 'Presented research findings at International Conference on Cybersecurity and AI held in Shanghai', 'Research has real-world impact helping law enforcement agencies process crime reports 10x faster', 'Demonstrates capability to conduct rigorous research and contribute to scientific advancement in cybersecurity field'])">
+                    <div class="achievement-icon"><i class="fas fa-book"></i></div>
+                    <div class="achievement-title">Research Publication</div>
+                    <div class="achievement-description">"CYBERGUARD – NLP-based Cybercrime Reporting" published in Journal of Xidian University</div>
+                </div>
+
+                <div class="achievement-card reveal" onclick="openDetailModal('achievement', 'Sports Excellence', '', [], ['Won Gold Medal in Odisha Badminton League 2024 competing against 100+ professional and amateur players from the state', 'Demonstrated exceptional athletic skills, strategic gameplay, and mental toughness under competitive pressure', 'Achieved 95% win rate in state-level tournaments establishing reputation as one of the top badminton players', 'Earned Silver Medal in SOA CUP university championship competing against elite players from premier institutions', 'Trained under national-level coaches improving technical skills and competitive strategy', 'Balanced rigorous training schedule with academic responsibilities achieving excellence in both domains', 'Mentored junior players and contributed to university badminton team development', 'Represented SOA in inter-university tournaments earning medals and recognition for the institution'])">
+                    <div class="achievement-icon"><i class="fas fa-medal"></i></div>
+                    <div class="achievement-title">Sports Excellence</div>
+                    <div class="achievement-description">Gold Medal – Odisha Badminton League | Silver Medal – SOA CUP</div>
+                </div>
+
+                <div class="achievement-card reveal" onclick="openDetailModal('achievement', 'Bharat Scout Recognition', '', [], ['Earned Odisha Rajya Puraskar, the highest state-level recognition in Bharat Scouts and Guides for exemplary service', 'Demonstrated outstanding contributions including organizing 20+ community service initiatives benefiting 5000+ people', 'Led educational programs teaching underprivileged children basic literacy, numeracy, and life skills through scouting activities', 'Conducted disaster relief operations during floods providing food, water, and emergency supplies to affected communities', 'Trained 50+ junior scouts in leadership, teamwork, and civic responsibility through progressive advancement programs', 'Organized environmental conservation campaigns planting 1000+ trees and cleaning local water bodies', 'Demonstrated exceptional leadership qualities earning respect and trust from both scouts and community members', 'Recognized by government officials for embodying values of service, integrity, and commitment to nation-building'])">
+                    <div class="achievement-icon"><i class="fas fa-star"></i></div>
+                    <div class="achievement-title">Bharat Scout Recognition</div>
+                    <div class="achievement-description">Secured Odisha Rajya Puraskar for outstanding contributions to scouting</div>
+                </div>
+
+                <div class="achievement-card reveal" onclick="openDetailModal('achievement', 'Startup Odisha Presenter', '', [], ['Selected as presenter at Ideation by Startup Odisha hosted by OUTR Bhubaneswar, a premier platform for aspiring entrepreneurs', 'Pitched innovative EdTech startup concept to audience of 500+ entrepreneurs, investors, and industry leaders', 'Presented market analysis, business model, and growth projections for online tutoring platform targeting rural India', 'Demonstrated pitch deck with compelling metrics: 50,000 user base, 30% month-on-month growth, and path to profitability', 'Received constructive feedback from venture capitalists and mentors at leading startup accelerators', 'Generated investor interest with 3 potential funding opportunities worth 50 lakhs total investment', 'Showcased problem-solving approach addressing 80% school dropout rate in rural areas through affordable quality education', 'Received recognition for clarity of vision, market understanding, and entrepreneurial potential'])">
+                    <div class="achievement-icon"><i class="fas fa-microphone"></i></div>
+                    <div class="achievement-title">Startup Odisha Presenter</div>
+                    <div class="achievement-description">Presenter at Ideation by Startup Odisha, OUTR Bhubaneswar event</div>
+                </div>
+
+                <div class="achievement-card reveal" onclick="openDetailModal('achievement', 'Tech Expertise', '', [], ['Demonstrated mastery in full-stack web development building 10+ production applications serving 100,000+ users', 'Proficient in modern tech stack including React.js, Node.js, Python, SQL, MongoDB, and cloud platforms', 'Expert-level knowledge in system design, database optimization, and scalable architecture patterns', 'Advanced data engineering capabilities including ETL pipelines, data warehousing, and analytics infrastructure', 'Hands-on experience with big data technologies: Pandas, NumPy, Apache Spark, and distributed computing', 'Proven expertise in machine learning including model training, evaluation, deployment, and A/B testing', 'Deep understanding of AI/ML algorithms: regression, classification, clustering, NLP, and computer vision', 'Developed 3 ML models deployed in production achieving 85-97% accuracy in respective domains', 'Cloud infrastructure expertise: Google Cloud Platform (GCP), Docker containerization, Kubernetes orchestration', 'DevOps knowledge: CI/CD pipelines, GitHub Actions, automated testing, and infrastructure as code'])">
+                    <div class="achievement-icon"><i class="fas fa-laptop"></i></div>
+                    <div class="achievement-title">Tech Expertise</div>
+                    <div class="achievement-description">Proficient in full-stack development, data engineering, and AI/ML applications</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="cert-card reveal">
+                    <div class="cert-name"><i class="fas fa-certificate"></i> Enterprise Design Thinking</div>
+                    <div class="cert-issuer">IBM</div>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-name"><i class="fas fa-certificate"></i> Data Analytics Job Simulation</div>
+                    <div class="cert-issuer">Deloitte</div>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-name"><i class="fas fa-certificate"></i> Oracle Cloud Infrastructure AI</div>
+                    <div class="cert-issuer">Oracle</div>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-name"><i class="fas fa-certificate"></i> Project Management Certification</div>
+                    <div class="cert-issuer">Accenture</div>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-name"><i class="fas fa-certificate"></i> Python (Basic)</div>
+                    <div class="cert-issuer">HackerRank</div>
+                </div>
+                <div class="cert-card reveal">
+                    <div class="cert-name"><i class="fas fa-certificate"></i> UI/UX Designing</div>
+                    <div class="cert-issuer">Great Learning</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item reveal">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-text">
+                        <div class="contact-label">Email</div>
+                        <div class="contact-value">shubhranshuacharya23@gmail.com</div>
+                    </div>
+                </div>
+
+                <div class="contact-item reveal">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-text">
+                        <div class="contact-label">Phone</div>
+                        <div class="contact-value">+91 7205312020</div>
+                    </div>
+                </div>
+
+                <div class="contact-item reveal">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="contact-text">
+                        <div class="contact-label">Location</div>
+                        <div class="contact-value">Bhubaneswar, India</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="social-links">
+                <a href="https://linkedin.com/in/shubhranshu-acharya" class="social-link" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/ShubhranshuAcharya" class="social-link" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:shubhranshuacharya23@gmail.com" class="social-link" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Modal -->
+    <div id="resumeModal" class="resume-modal">
+        <div class="resume-content">
+            <div class="resume-header">
+                <h2><i class="fas fa-file-pdf"></i> My Resume</h2>
+                <button class="resume-close" onclick="closeResumeModal()">&times;</button>
+            </div>
+            <div class="resume-viewer" id="resumeContent">
+                <div class="resume-section">
+                    <div class="resume-section-title">Profile Summary</div>
+                    <div class="resume-item-description">
+                        Result-driven Computer Science Engineering student (Batch 2026) passionate about building scalable and data-driven systems. Skilled in Python, SQL, React.js, Node.js, and data pipeline development with a solid understanding of cloud technologies and analytics. Experienced in designing end-to-end solutions with strong analytical and problem-solving abilities.
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <div class="resume-section-title">Education</div>
+                    <div class="resume-item">
+                        <div class="resume-item-title">B.Tech in Computer Science and Engineering</div>
+                        <div class="resume-item-meta">CGPA: 7.44 / 10 | Nov 2022 – Present</div>
+                        <div class="resume-item-description">Institute of Technical Education and Research (SOA University), Bhubaneswar</div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <div class="resume-section-title">Technical Skills</div>
+                    <div class="resume-item">
+                        <div class="resume-item-meta">Languages:</div>
+                        <div class="resume-item-description">Python, Java, SQL, JavaScript</div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-meta">Frontend:</div>
+                        <div class="resume-item-description">React.js, HTML5, CSS3, Tailwind, Bootstrap</div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-meta">Backend:</div>
+                        <div class="resume-item-description">Node.js, Express.js, RESTful APIs</div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-meta">Tools & Technologies:</div>
+                        <div class="resume-item-description">Google Cloud, Figma, VS Code, Power BI, Android Studio, Adobe Photoshop</div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-meta">Database:</div>
+                        <div class="resume-item-description">MySQL, PostgreSQL, MongoDB, Data Modeling</div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-meta">Data Engineering:</div>
+                        <div class="resume-item-description">Data Preprocessing, Pandas, NumPy, Data Cleaning</div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-meta">CS Fundamentals:</div>
+                        <div class="resume-item-description">Data Structures & Algorithms, OOP, System Design, SDLC</div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <div class="resume-section-title">Professional Experience</div>
+                    <div class="resume-item">
+                        <div class="resume-item-title">Full-Stack Developer</div>
+                        <div class="resume-item-meta">Attractify Technologies (IIT Bhubaneswar) | May 2025 – Sep 2025</div>
+                        <div class="resume-item-description">
+                            • Built and optimized scalable front-end modules using React + TypeScript, improving responsiveness by 30%<br>
+                            • Integrated RESTful APIs and managed state using Redux and Context API<br>
+                            • Collaborated in Agile sprints, performing unit testing and version control via Git
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-title">Software Developer Intern</div>
+                        <div class="resume-item-meta">EvoqueSys, Bhubaneswar | Sep 2023 – Mar 2024</div>
+                        <div class="resume-item-description">
+                            • Developed full-stack features using React.js, Node.js, SQL, focusing on scalability and clean architecture<br>
+                            • Enhanced API logic, reduced response latency, and contributed to CI/CD pipeline setup<br>
+                            • Collaborated with cross-functional teams to deliver iterative releases in Agile environment
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-title">Coordinator & Campus Ambassador</div>
+                        <div class="resume-item-meta">SOA Flying Community & Glow Logics | June 2023 – Present</div>
+                        <div class="resume-item-description">
+                            • Organized workshops and inter-college drone competitions to promote UAV innovation and safety<br>
+                            • Trained members in assembly, calibration, FPV/autonomous flight, mapping<br>
+                            • Promoted brand through marketing campaigns and organized events
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <div class="resume-section-title">Key Projects</div>
+                    <div class="resume-item">
+                        <div class="resume-item-title">STUTOR – Peer-to-Peer Learning Platform</div>
+                        <div class="resume-item-meta">React, Java, REST APIs</div>
+                        <div class="resume-item-description">
+                            • Built a scalable web platform connecting students and tutors<br>
+                            • Designed secure authentication, tutor recommendation, and optimized React rendering<br>
+                            • Improved UI performance by 25% through optimized component rendering
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-title">NLP-Based Cybercrime Reporting System</div>
+                        <div class="resume-item-meta">Python, Java, AI/ML</div>
+                        <div class="resume-item-description">
+                            • Built a text classification model achieving 97% accuracy using NLP preprocessing and machine learning<br>
+                            • Implemented data cleaning, preprocessing, and feature extraction using Pandas and Scikit-learn<br>
+                            • Designed scalable data pipelines; published research in Journal of Xidian University (2024)
+                        </div>
+                    </div>
+                    <div class="resume-item">
+                        <div class="resume-item-title">Healthcare Prediction Analyzer</div>
+                        <div class="resume-item-meta">Python, React.js</div>
+                        <div class="resume-item-description">
+                            • Designed a data analytics pipeline for patient data prediction and storage<br>
+                            • Integrated backend APIs for real-time analysis; achieved 85% accuracy in prediction results<br>
+                            • Integrated frontend and backend for real-time visualization and faster decision-making
+                        </div>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <div class="resume-section-title">Achievements</div>
+                    <div class="resume-item-description">
+                        • Runner-Up, Smart India Hackathon 2024 – recognized for social innovation platform<br>
+                        • Research Publication: "CYBERGUARD – NLP-based Cybercrime Reporting," Journal of Xidian University<br>
+                        • Presenter: Ideation by Startup Odisha, OUTR Bhubaneswar<br>
+                        • Sports: Gold – Odisha Badminton League; Silver – SOA CUP<br>
+                        • Bharat Scout and Guides: Secured Odisha Rajya Puraskar
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <div class="resume-section-title">Certifications</div>
+                    <div class="resume-item-description">
+                        • Enterprise Design Thinking – IBM<br>
+                        • Data Analytics Job Simulation – Deloitte<br>
+                        • Oracle Cloud Infrastructure Generative AI Professional – Oracle<br>
+                        • Project Management Certification – Accentee<br>
+                        • Python (Basic) – HackerRank<br>
+                        • UI/UX Designing – Great Learning
+                    </div>
+                </div>
+
+                <div class="resume-download">
+                    <button class="resume-download-btn" onclick="downloadResume()">
+                        <i class="fas fa-download"></i> Download as PDF
+                    </button>
+                    <button class="resume-download-btn" onclick="closeResumeModal()">
+                        <i class="fas fa-times"></i> Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detail Modal -->
+    <div id="detailModal" class="detail-modal">
+        <div class="detail-content" id="detailContent"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Shubhranshu Acharya. All rights reserved.</p>
+            <p style="margin-top: 10px; font-size: 0.9rem;">Designed with <i class="fas fa-heart" style="color: var(--violet-primary);"></i> and built with passion</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
